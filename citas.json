@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "petName": "Benito",
+    "age": "1 año",
+    "type": "perro",
+    "color": "blanco",
+    "diagnosis": "otitis"
+  },
+  {
+    "petName": "Julieta",
+    "age": "6 años",
+    "type": "perro",
+    "color": "amarillo",
+    "diagnosis": "Moquillo"
+  }
+]

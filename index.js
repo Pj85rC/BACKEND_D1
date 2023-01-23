@@ -1,4 +1,4 @@
-const { register, read } = require("./operaciones");
+const { register, read, deleteJSON } = require("./operaciones");
 
 const arguments = process.argv.slice(2);
 const operations = arguments[0];
@@ -15,3 +15,5 @@ if (operations === "register") {
 if (operations === "read") {
   read();
 }
+
+// deleteJSON("citas.json")

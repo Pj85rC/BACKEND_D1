@@ -12,16 +12,22 @@
 const fs = require("fs");
 
 const register = (petName, age, type, color, diagnosis) => {
-
-  const appointment = JSON.parse(fs.readFile("citas.json", (encoding = "utf8")));
+  const appointment = JSON.parse(
+    fs.readFileSync("citas.json", (encoding = "utf8"))
+  );
   appointment.push({ petName, age, type, color, diagnosis });
 
   fs.writeFileSync(`citas.json`, JSON.stringify(appointment));
 };
 
 const read = () => {
-  const content = fs.readFile("citas.json", (encoding = "utf8") );
-  console.log(appointment)
+  const content = fs.readFileSync("citas.json", (encoding = "utf8"));
+  console.log(content);
+};
+
+const deleteJSON = (fileName) => {
+  fs.writeFileSync(fileName, "[]");
 };
 
 module.exports = { register, read };
+// module.exports = { deleteJSON };
